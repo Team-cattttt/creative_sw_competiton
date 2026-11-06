@@ -1,4 +1,4 @@
-const apiKey = '1a23acb4b0e96482db1d20341c03bff1517402bfb1db5e0e1f083eb50a254783'; // 여기에 발급받은 API 키를 입력하세요
+const apiKey = 'YOUR_API_KEY'; // 여기에 발급받은 API 키를 입력하세요
 const stories = [];
 const qas = [];
 
