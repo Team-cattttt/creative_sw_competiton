@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삶의 이야기 공유 플랫폼</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>삶의 이야기 공유 플랫폼</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">홈</a></li>
+                <li><a href="#stories">이야기들</a></li>
+                <li><a href="#create">이야기 공유하기</a></li>
+                <li><a href="#community">커뮤니티</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>삶의 이야기 공유 플랫폼에 오신 것을 환영합니다</h2>
+        <p>당신의 삶의 경험을 나누고, 세대 간의 소통을 이어가세요.</p>
+        <button onclick="scrollToSection('create')">이야기 공유하기</button>
+    </section>
+
+    <section id="stories">
+        <h2>최근 이야기들</h2>
+        <div id="story-list">
+            <!-- 이야기들이 동적으로 여기에 로드됩니다 -->
+        </div>
+    </section>
+
+    <section id="create">
+        <h2>이야기 공유하기</h2>
+        <form id="story-form">
+            <input type="text" id="story-title" placeholder="이야기 제목" required>
+            <textarea id="story-content" placeholder="여기에 이야기를 작성하세요..." required></textarea>
+            <select id="age-group" required>
+                <option value="" disabled selected>연령대를 선택하세요</option>
+                <option value="청년">청년 (20~30대)</option>
+                <option value="노년">노년 (60대 이상)</option>
+            </select>
+            <select id="story-theme" required>
+                <option value="" disabled selected>주제를 선택하세요</option>
+                <option value="육아">육아</option>
+                <option value="경제">경제</option>
+                <option value="가족">가족</option>
+                <option value="사랑">사랑</option>
+                <option value="인생">인생</option>
+                <option value="삶의 의미">삶의 의미</option>
+                <option value="성찰">성찰</option>
+                <option value="추억">추억</option>
+                <option value="회상">회상
+                <option value="이해">이해</option>
+                <option value="역경">역경</option>
+                <option value="공감">공감</option>
+            </select>
+            <button type="button" onclick="fetchBookByTheme()">주제 관련 도서 추천받기</button>
+            <div id="book-info">
+                <img id="book-cover" src="" alt="책 표지" style="display: none;">
+                <p id="book-summary"></p>
+            </div>
+            <button type="submit">제출하기</button>
+        </form>
+    </section>
+    
+    <section id="community">
+        <h2>커뮤니티</h2>
+        <p>대화에 참여하고, 다른 사람들과 생각을 나누세요.</p>
+        <div id="qa-section">
+            <h3>세대 간 Q&A</h3>
+            <form id="qa-form">
+                <input type="text" id="qa-title" placeholder="질문 제목을 입력하세요..." required>
+                <textarea id="qa-question" placeholder="질문 내용을 입력하세요..." required></textarea>
+                <select id="qa-age-group" required>
+                    <option value="" disabled selected>대상을 선택하세요</option>
+                    <option value="청년">청년에게</option>
+                    <option value="노년">노년에게</option>
+                </select>
+                <button type="submit">질문하기</button>
+            </form>
+            <div id="qa-list">
+                <!-- Q&A가 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 삶의 이야기 공유 플랫폼. 모든 권리 보유.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+    
