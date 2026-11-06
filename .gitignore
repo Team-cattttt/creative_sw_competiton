@@ -1,0 +1,19 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# 크롬 드라이버 (각자 버전에 맞게 받아서 사용)
+chromedriver*/
+chromedriver*.exe
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
